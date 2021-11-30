@@ -1,7 +1,9 @@
 export const login = (email) =>{
     localStorage.setItem('email', email);
 };
-
+export const logout = (email) =>{
+    localStorage.removeItem('email');
+};
 export const getUser = ()=>{
     let email = localStorage.getItem('email');
     return email;

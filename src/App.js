@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Dashboard from './components/Dashboard';
 import Create from './components/Create';
 import Login from './components/Login';
+import Logout from './components/Logout';
 import Register from './components/Register';
 import MyPets from './components/MyPets';
 import Details from './components/Details';
@@ -29,6 +30,12 @@ function App() {
       user: email,
     });
   };
+  const onLogout = ()=>{
+    setUserInfo({
+      isAuthenticated: false,
+      user: '',
+    });
+  };
 
   return (
     <div id="container">
@@ -42,6 +49,8 @@ function App() {
           <Route path="/my-pets" element={<MyPets />} />
           <Route path="/create" element={<Create />} />
           <Route path="/details/:petId" element={<Details />} />
+
+          <Route path="/logout" element={<Logout onLogout={onLogout}/>} />
         </Routes>
       </main>
 
