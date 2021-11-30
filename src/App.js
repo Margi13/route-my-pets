@@ -1,4 +1,5 @@
-import Header from './components/Header'
+import {} from 'react-router-dom'; 
+import Header from './components/Header';
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <main id="site-content">
 
       </main>
-      
+
     </div>
   );
 }
